@@ -1,0 +1,22 @@
+body{
+    background-image: url('../Images/app-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#title h1{
+    font-family: monospace;
+    font-size: 3rem;
+    letter-spacing: 0.8rem;
+}
