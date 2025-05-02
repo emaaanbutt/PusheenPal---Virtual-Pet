@@ -1,0 +1,39 @@
+body{
+    background-image: url('../Images/app-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+#preloader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffe6f0; /* light pink background */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #fff;
+    border-top: 6px solid #ff69b4; /* hot pink */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Spin Animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+  }
