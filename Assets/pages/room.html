@@ -14,7 +14,7 @@
 <body>
     <div id="container">
         <h2 id="intro"></h2>
-        <img id="cat" src="../Images/cat-simple.png" alt="">
+        <img id="cat" src="../Images/cat-simple.png" alt="pusheen cat">
     </div>
 
     <div id="eat-button" class="button">
@@ -34,5 +34,35 @@
             SUSHI
         </div>
     </div>
+
+    <div id="paint-button" class="button">
+        PAINT
+    </div>
+
+    <div id="paint-area" style="display: none;">
+    <div id="color-palette">
+        <button class="color-btn" data-color="black" style="background: black;"></button>
+        <button class="color-btn" data-color="red" style="background: red;"></button>
+        <button class="color-btn" data-color="blue" style="background: blue;"></button>
+        <button class="color-btn" data-color="green" style="background: green;"></button>
+        <button class="color-btn" data-color="yellow" style="background: yellow;"></button>
+        <button class="color-btn" data-color="pink" style="background: pink"></button>
+        <button class="color-btn" data-color="purple" style="background: purple"></button>
+        <button class="color-btn" data-color="brown" style="background: brown;"></button>
+    </div>
+    <canvas id="drawing-canvas"></canvas>
+    <div id="paint-tools">
+        <button id="eraser">Eraser</button>
+        <button id="clear">Clear</button>
+      </div>
+    </div>
+
+
+    
+    <audio id="bg-music" src="Assets/audio/bg-music.mp3" autoplay loop></audio>
+
+
+    <audio id="meow-sound" src="Assets/audio/meow.mp3" loop></audio>
+
 </body>
 </html>
