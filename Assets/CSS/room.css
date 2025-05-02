@@ -144,4 +144,11 @@ body{
     bottom: 10rem;
 }
 
+#hats-button{
+    background-image: url('../Images/hats.jpg');
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
+
 
