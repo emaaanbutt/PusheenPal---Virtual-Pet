@@ -44,6 +44,7 @@ body{
 .button:hover{
     width: 6.8rem;
     height: 3.3rem;
+    cursor: pointer;
 }
 
 .outlined-text {

@@ -33,4 +33,14 @@ $(function(){
     $("#eat-button").on("click", function() {
         $("#eat-container").addClass("show");
       });
+
+});
+
+
+$(function(){
+    $("#pizza-button").on("click", function(){
+        setTimeout(function(){
+            $("#cat").attr("src", '../Images/cat-pizza.png');
+        }, 7000);
+    });
 });

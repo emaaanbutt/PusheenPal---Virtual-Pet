@@ -46,4 +46,5 @@ body{
 #button:hover{
     background-color: rgb(245, 220, 241);
     color:rgb(238, 107, 220);
+    cursor: pointer;
 }
