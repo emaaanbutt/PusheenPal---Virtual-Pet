@@ -137,3 +137,11 @@ body{
 }
 
 
+#start-sounds img{
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    bottom: 10rem;
+}
+
+

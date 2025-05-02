@@ -7,6 +7,34 @@ $(function(){
     $("#intro").text(`Meet ${name} 🐈‍⬛`);
 });
 
+$(function () {
+    let isSoundOn = false;
+    const bgMusic = $("#bg-music")[0];
+    const meowSound = $("#meow-sound")[0];
+    let meowInterval;
+  
+    $("#start-sounds").on("click", function () {
+      isSoundOn = !isSoundOn;
+  
+      if (isSoundOn) {
+        $("#sound-icon").attr("src", "../Images/sound-on.png");
+        bgMusic.play();
+        
+        meowInterval = setInterval(() => {
+          meowSound.currentTime = 0;
+          meowSound.play();
+        }, 10000);
+      } else {
+        $("#sound-icon").attr("src", "../Images/no-sound.png");
+        bgMusic.pause();
+        bgMusic.currentTime = 0;
+        
+        clearInterval(meowInterval);
+      }
+    });
+  });
+  
+
 $(function(){
     const images = ['../Images/cat-simple.png', '../Images/cat-simple2.png'];
 
