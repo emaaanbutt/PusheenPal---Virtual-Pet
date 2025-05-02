@@ -5,3 +5,24 @@ $(function(){
     document.body.style.backgroundImage= `url(${room})`;
     $("#intro").text(`Meet ${name} 🐈‍⬛`);
 });
+
+$(function(){
+    const images = ['../Images/cat-simple.png', '../Images/cat-simple2.png'];
+
+    let index = 0;
+    setInterval(function(){
+        index = (index + 1) % images.length;
+        $("#cat").attr("src", images[index]);
+    }, 3000);
+});
+
+
+$(function(){
+    $("#cat").on("mouseenter", function(){
+        $("#cat").attr("src", '../Images/cat-love.png');
+    });
+
+    $("#cat").on("mouseleave", function(){
+        $("#cat").attr("src", '../Images/cat-simple.png');
+    });
+})
