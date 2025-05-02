@@ -26,3 +26,11 @@ $(function(){
         $("#cat").attr("src", '../Images/cat-simple.png');
     });
 })
+
+
+$(function(){
+
+    $("#eat-button").on("click", function() {
+        $("#eat-container").addClass("show");
+      });
+});

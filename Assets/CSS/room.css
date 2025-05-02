@@ -1,3 +1,9 @@
+body{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -6,9 +12,6 @@
 }
 
 #intro{
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
     color: white;
@@ -20,3 +23,68 @@
     bottom: 0.2rem;
     height: 17rem;
 }
+
+.button{
+    width: 7rem;
+    height: 3.5rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    background-size: cover;
+    background-position: center;
+    transition: 0.1s ease-in;
+    letter-spacing: 0.3rem;
+}
+
+.button:hover{
+    width: 6.8rem;
+    height: 3.3rem;
+}
+
+.outlined-text {
+    color: black;
+    text-shadow:
+      -1px -1px 0 white,
+       1px -1px 0 white,
+      -1px  1px 0 white,
+       1px  1px 0 white;
+  }
+
+#eat-button{
+    position: absolute;
+    bottom: 1rem;
+    background-image: url('../Images/eat.jpg');
+}
+
+#eat-container{
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#eat-container.show {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+#pizza-button{
+    background-image: url('../Images/pizza.jpg');
+}
+
+#shake-button{
+    background-image: url('../Images/shake.jpg');
+}
+
+#sushi-button{
+    background-image: url('../Images/sushi.jpg');
+}
+
+
+
