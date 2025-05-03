@@ -1,0 +1,22 @@
+{
+  "name": "pusheenpal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emaaanbutt/PusheenPal---Virtual-Pet.git"
+  },
+  "author": "Eman Butt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emaaanbutt/PusheenPal---Virtual-Pet/issues"
+  },
+  "homepage": "https://github.com/emaaanbutt/PusheenPal---Virtual-Pet#readme",
+  "description": "",
+  "devDependencies": {
+    "electron": "^36.1.0"
+  }
+}

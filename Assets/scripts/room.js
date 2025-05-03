@@ -64,7 +64,6 @@ $(function(){
         $("#eat-container").toggleClass("show");
         $("#paint-area").hide();
         $("#hats-display").hide();
-        $("#sleep").hide();
       });
 
 });
@@ -107,7 +106,6 @@ $(function(){
     $("#paint-button").on("click", function(){
         $("#eat-container").removeClass("show");
         $("#hats-display").hide();
-        $("#sleep").hide();
         $("#paint-area").toggle(() => {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
@@ -166,7 +164,6 @@ $(function(){
     $("#hats-button").on("click", function(){
         $("#eat-container").removeClass("show");
         $("#paint-area").hide();
-        $("#sleep").hide();
         $("#hats-display").toggle();
         $("#cat").attr("src", '../Images/cat-simple2.png');
 
@@ -195,7 +192,6 @@ $(function(){
         $("#eat-container").removeClass("show");
         $("#paint-area").hide();
         $("#hats-display").hide();
-        $("#sleep").hide();
 
         setTimeout(function(){
             $("#confetti").show();
