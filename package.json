@@ -1,7 +1,7 @@
 {
   "name": "pusheenpal",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "Assets/scripts/index.js",
   "scripts": {
     "start": "electron ."
   },
