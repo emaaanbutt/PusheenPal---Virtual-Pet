@@ -1,9 +1,3 @@
-$(function(){
-    $("#button").on("click", function(){
-        window.location.href = "./Assets/pages/customize.html";
-    });
-});
-
 const path = require("path");
 const { app, BrowserWindow, ipcMain } = require("electron");
 const fs = require("fs");
