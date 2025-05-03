@@ -35,20 +35,22 @@ $(function () {
   });
   
 
-$(function(){
-    const images = ['../Images/cat-simple.png', '../Images/cat-simple2.png'];
+// $(function(){
+//     const images = ['../Images/cat-simple.png', '../Images/cat-simple2.png'];
 
-    let index = 0;
-    setInterval(function(){
-        index = (index + 1) % images.length;
-        $("#cat").attr("src", images[index]);
-    }, 3000);
-});
+//     let index = 0;
+//     setInterval(function(){
+//         index = (index + 1) % images.length;
+//         $("#cat").attr("src", images[index]);
+//     }, 3000);
+// });
 
 
 $(function(){
     $("#cat").on("mouseenter", function(){
         $("#cat").attr("src", '../Images/cat-love.png');
+        const meow_love = $("#meow-love")[0];
+        meow_love.play();
     });
 
     $("#cat").on("mouseleave", function(){
@@ -145,9 +147,6 @@ $(function(){
     });
 });
 
-
-
-
 $(function(){
 
     $("#hats-display").hide();
@@ -155,6 +154,8 @@ $(function(){
         $("#eat-container").removeClass("show");
         $("#paint-area").hide();
         $("#hats-display").toggle();
+        $("#cat").attr("src", '../Images/cat-simple2.png');
+
     })
 
     const hats = ['../Images/hat1.png', '../Images/hat2.png', '../Images/hat3.png', '../Images/hat4.png', '../Images/hat5.png', '../Images/hat6.png', '../Images/hat7.png']
@@ -170,6 +171,21 @@ $(function(){
         $("#hat img").attr("src", hats[index]);
     });
 });
+
+
+$(function(){
+    $("#confetti").hide();
+
+    $("#confetti-button").on("click", function(){
+        setTimeout(function(){
+            $("#confetti").show();
+            setTimeout(function(){
+                $("#confetti").hide();
+            }, 5000);
+        });
+    });
+});
+
 
 
 
