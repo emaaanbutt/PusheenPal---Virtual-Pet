@@ -62,6 +62,7 @@ $(function(){
     $("#eat-button").on("click", function() {
         $("#eat-container").toggleClass("show");
         $("#paint-area").hide();
+        $("#hats-display").hide();
       });
 
 });
@@ -91,6 +92,7 @@ $(function(){
 
     $("#paint-button").on("click", function(){
         $("#eat-container").removeClass("show");
+        $("#hats-display").hide();
         $("#paint-area").toggle(() => {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
@@ -142,6 +144,33 @@ $(function(){
         ctx.moveTo(x, y);
     });
 });
+
+
+
+
+$(function(){
+
+    $("#hats-display").hide();
+    $("#hats-button").on("click", function(){
+        $("#eat-container").removeClass("show");
+        $("#paint-area").hide();
+        $("#hats-display").toggle();
+    })
+
+    const hats = ['../Images/hat1.png', '../Images/hat2.png', '../Images/hat3.png', '../Images/hat4.png', '../Images/hat5.png', '../Images/hat6.png', '../Images/hat7.png']
+    let index=0;
+
+    $("#a2").on("click", function(){
+        index = (index+1) % hats.length;
+        $("#hat img").attr("src", hats[index]);
+    });
+
+    $("#a1").on("click", function(){
+        index = (index-1 + hats.length) % hats.length;
+        $("#hat img").attr("src", hats[index]);
+    });
+});
+
 
 
 
