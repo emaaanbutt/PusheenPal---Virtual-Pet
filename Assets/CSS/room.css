@@ -2,6 +2,7 @@ body{
     font-family: "Anton", sans-serif;
     font-weight: 200;
     font-style: normal;
+    overflow: hidden;
 }
 
 #container{
@@ -17,6 +18,14 @@ body{
     color: white;
     text-transform: uppercase;
     background-color: lightcoral;
+}
+
+#entrance{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    bottom: -5rem;
+
 }
 
 #cat{
@@ -112,6 +121,11 @@ body{
     border-radius: 50%;
 }
 
+#paint-tools{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #paint-tools button {
     margin-right: 8px;
     padding: 6px 12px;
@@ -185,12 +199,12 @@ body{
     height: 200px;
 }
 
-
 #confetti-button{
     background-image: url('../Images/confetti.jpg');
     position: absolute;
     right: 1rem;
-    bottom: 5rem;
+    bottom: 9rem;
+
 }
 
 
@@ -200,4 +214,12 @@ body{
     position: absolute;
     top: 0rem;
     overflow: hidden;
+}
+
+
+#sleep-button{
+    background-image: url('../Images/sleep.jpg');
+    position: absolute;
+    right: 1rem;
+    bottom: 5rem;
 }

@@ -7,12 +7,21 @@ $(function(){
     $("#intro").text(`Meet ${name} 🐈‍⬛`);
 });
 
+$(function(){
+    $("#cat").hide();
+    setTimeout(function(){
+        $("#entrance").hide();
+        $("#cat").show();
+    }, 5000);
+});
+
 $(function () {
     let isSoundOn = false;
     const bgMusic = $("#bg-music")[0];
     const meowSound = $("#meow-sound")[0];
     let meowInterval;
   
+    bgMusic.volume = 0.2;
     $("#start-sounds").on("click", function () {
       isSoundOn = !isSoundOn;
   
@@ -33,17 +42,7 @@ $(function () {
       }
     });
   });
-  
 
-// $(function(){
-//     const images = ['../Images/cat-simple.png', '../Images/cat-simple2.png'];
-
-//     let index = 0;
-//     setInterval(function(){
-//         index = (index + 1) % images.length;
-//         $("#cat").attr("src", images[index]);
-//     }, 3000);
-// });
 
 
 $(function(){
@@ -65,23 +64,36 @@ $(function(){
         $("#eat-container").toggleClass("show");
         $("#paint-area").hide();
         $("#hats-display").hide();
+        $("#sleep").hide();
       });
 
 });
 
-
-
 $(function(){
+    let nom = $("#nom-nom-nom")[0];
     $("#pizza-button").on("click", function(){
         $("#cat").attr("src", '../Images/cat-pizza.png');
+        nom.play();
+        setTimeout(function(){
+            $("#cat").attr("src", '../Images/cat-simple.png');
+        }, 5000);
+
     });
 
     $("#shake-button").on("click", function(){
         $("#cat").attr("src", '../Images/cat-shake.png');
+        nom.play();
+        setTimeout(function(){
+            $("#cat").attr("src", '../Images/cat-simple.png');
+        }, 5000);
     });
 
     $("#sushi-button").on("click", function(){
         $("#cat").attr("src", '../Images/cat-sushi.png');
+        nom.play();
+        setTimeout(function(){
+            $("#cat").attr("src", '../Images/cat-simple.png');
+        }, 5000);
     });
 });
 
@@ -95,6 +107,7 @@ $(function(){
     $("#paint-button").on("click", function(){
         $("#eat-container").removeClass("show");
         $("#hats-display").hide();
+        $("#sleep").hide();
         $("#paint-area").toggle(() => {
             canvas.width = canvas.offsetWidth;
             canvas.height = canvas.offsetHeight;
@@ -153,6 +166,7 @@ $(function(){
     $("#hats-button").on("click", function(){
         $("#eat-container").removeClass("show");
         $("#paint-area").hide();
+        $("#sleep").hide();
         $("#hats-display").toggle();
         $("#cat").attr("src", '../Images/cat-simple2.png');
 
@@ -175,10 +189,17 @@ $(function(){
 
 $(function(){
     $("#confetti").hide();
+    let wiwiwi = $("#wiwiwi")[0];
 
     $("#confetti-button").on("click", function(){
+        $("#eat-container").removeClass("show");
+        $("#paint-area").hide();
+        $("#hats-display").hide();
+        $("#sleep").hide();
+
         setTimeout(function(){
             $("#confetti").show();
+            wiwiwi.play();
             setTimeout(function(){
                 $("#confetti").hide();
             }, 5000);
@@ -186,6 +207,31 @@ $(function(){
     });
 });
 
+
+$(function(){
+    let toggle = true;
+    $("#sleep").hide();
+    let snoring = $("#snoring")[0];
+    $("#sleep-button").on("click", function(){
+        $("#eat-container").removeClass("show");
+        $("#paint-area").hide();
+        $("#hats-display").hide();
+        $("#confetti").hide();
+
+        $("#sleep").toggle();
+        $("#cat").toggle();
+
+        if (toggle) {
+            $("#sleep-button").text("ARISE");
+            snoring.play();
+        } else {
+            $("#sleep-button").text("SLEEP");
+            snoring.pause();
+            snoring.currentTime = 0;
+        }
+        toggle = !toggle;
+    });
+});
 
 
 
